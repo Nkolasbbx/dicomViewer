@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block titulo %}Archivo DICOM{% endblock %}
+
+{% block contenido %}
+<div class="container mt-4">
+    <h4 class="card-title">Archivo DICOM</h4>
+    <img src="data:image/png;base64,{{ img_data }}" alt="Imagen del archivo DICOM" style="max-width: 100%; height: auto;">
+    <br>
+    <a class="btn btn-secondary mt-3" href="{% url 'archivos' %}">Volver a la lista</a>
+</div>
+{% endblock %}

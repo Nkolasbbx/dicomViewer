@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block titulo %}Agregar archivos Dicom {% endblock %}
+
+{% block contenido  %}
+
+<div class="card">
+    <div class="card-header">Archivos DICOM</div>
+    <div class="card-body">
+        
+        {% include 'archivos/form.html' %}
+
+    </div>
+    <div class="card-footer text-muted">Footer</div>
+</div>
+
+
+{% endblock %}

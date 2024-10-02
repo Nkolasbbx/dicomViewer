@@ -1,0 +1,28 @@
+<body>
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form
+                    action="/upload"
+                    class="dropzone"
+                    id="myDropzone"
+                >
+                    <div class="dz-message" data-dz-message>
+                        <span>Drop files or click here</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4 text-center">
+        <button class="btn btn-primary">SUBIR ARCHIVO</button>
+    </div>
+
+<script>
+    Dropzone.options.myDropzone = {
+        maxFiles: 1,
+        acceptedFiles: ".dicom",
+        dictDefaultMessage: "Arrastra los archivos aquí o haz clic para subir",
+    };
+</script>
