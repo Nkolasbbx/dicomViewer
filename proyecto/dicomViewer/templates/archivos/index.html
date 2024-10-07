@@ -33,7 +33,10 @@
                                     <td>{{ archivo.usuario.id }}</td>
                                     <td>{{ archivo.uploaded_at }}</td>
                                     <td>
-                                        <a class="btn btn-danger" href="#" role="button">Eliminar</a> |
+                                        <form action="{% url 'eliminar_archivo' archivo.pk %}" method="POST" style="display:inline;" onsubmit="return confirm('¿Estás seguro de que quieres eliminar este archivo?');">
+                                            {% csrf_token %}
+                                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                                        </form>
                                         <a class="btn btn-primary" href="{% url 'verArchivo' archivo.pk %}" role="button">Ver imagen</a>
                                     </td>
                                 </tr>
