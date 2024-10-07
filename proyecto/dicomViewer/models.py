@@ -18,14 +18,12 @@ class Usuario(models.Model):
         return self.nombre
     
 # Modelo para los archivos DICOM
-from django.db import models
+
 
 class DicomFile(models.Model):
     dicom_file = models.FileField(upload_to='dicom_files/')
     uploaded_at = models.DateTimeField(auto_now_add=True)
-    usuario = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    usuario = models.ForeignKey('auth.User', on_delete=models.CASCADE,null=True, blank=True)
 
     def __str__(self):
         return self.dicom_file.name
-
-
